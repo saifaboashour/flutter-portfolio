@@ -26,7 +26,7 @@ class ContactSection extends StatelessWidget {
   Future<void> _emailMe(BuildContext context) async {
     final opened = await ExternalNavigator.openMailto(
       profile.email,
-      subject: 'Flutter / mobile opportunity',
+      subject: 'Software engineering opportunity',
     );
     if (!context.mounted) return;
     if (!opened) {
@@ -72,7 +72,7 @@ class ContactSection extends StatelessWidget {
         const SectionHeader(
           indexLabel: '05.',
           title: 'Contact',
-          subtitle: 'Open to conversations about Flutter and mobile work.',
+          subtitle: 'Open to full-stack, backend, and mobile opportunities.',
         ),
         const SizedBox(height: AppSpacing.lg),
         Container(
@@ -99,8 +99,8 @@ class ContactSection extends StatelessWidget {
               ),
               const SizedBox(height: AppSpacing.md),
               Text(
-                'Reach out by email for Flutter and mobile opportunities. '
-                'GitHub is linked as supporting profile evidence.',
+                'Reach out for full-stack, backend, or mobile engineering opportunities. '
+                'You can also explore selected work through GitHub.',
                 style: textTheme.bodyLarge?.copyWith(
                   color: AppColors.mutedText,
                 ),
