@@ -20,10 +20,10 @@ void main() {
     final profile = PortfolioData.profile;
 
     expect(find.text(profile.name), findsWidgets);
-    expect(find.textContaining('Senior Flutter Developer'), findsWidgets);
+    expect(find.textContaining('Full-Stack Software Engineer'), findsWidgets);
     expect(find.text('View Projects'), findsOneWidget);
     expect(find.text('Contact Me'), findsOneWidget);
-    expect(find.text('Download CV'), findsOneWidget);
+    expect(find.text('Mobile CV (PDF)'), findsOneWidget);
     expect(find.text('About'), findsWidgets);
     expect(find.text('Experience'), findsWidgets);
     expect(find.text('Projects'), findsWidgets);
@@ -60,12 +60,12 @@ void main() {
     await tester.pumpAndSettle();
 
     final cvButton = tester.widget<OutlinedButton>(
-      find.widgetWithText(OutlinedButton, 'Download CV'),
+      find.widgetWithText(OutlinedButton, 'Mobile CV (PDF)'),
     );
     expect(cvButton.onPressed, isNotNull);
     expect(PortfolioData.profile.hasCv, isTrue);
 
-    await tester.tap(find.text('Download CV'));
+    await tester.tap(find.text('Mobile CV (PDF)'));
     await tester.pumpAndSettle();
 
     expect(launched, isNotEmpty);
@@ -98,7 +98,7 @@ void main() {
     await tester.pumpAndSettle();
 
     final cvButton = tester.widget<OutlinedButton>(
-      find.widgetWithText(OutlinedButton, 'Download CV'),
+      find.widgetWithText(OutlinedButton, 'Mobile CV (PDF)'),
     );
     expect(cvButton.onPressed, isNull);
   });
