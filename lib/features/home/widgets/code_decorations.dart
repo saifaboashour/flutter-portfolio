@@ -21,7 +21,7 @@ class CodeDecorations extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '// portfolio.dart',
+              '// engineering_portfolio.ts',
               style: base?.copyWith(color: AppColors.mutedText),
             ),
             const SizedBox(height: 4),
@@ -30,15 +30,15 @@ class CodeDecorations extends StatelessWidget {
                 style: base,
                 children: const [
                   TextSpan(
-                    text: 'void ',
+                    text: 'async ',
                     style: TextStyle(color: AppColors.emerald),
                   ),
                   TextSpan(
-                    text: 'main',
+                    text: 'build',
                     style: TextStyle(color: AppColors.offWhite),
                   ),
                   TextSpan(
-                    text: '() {',
+                    text: 'Product() {',
                     style: TextStyle(color: AppColors.mutedText),
                   ),
                 ],
@@ -50,7 +50,7 @@ class CodeDecorations extends StatelessWidget {
                 children: const [
                   TextSpan(text: '  '),
                   TextSpan(
-                    text: 'runApp',
+                    text: 'return',
                     style: TextStyle(color: AppColors.offWhite),
                   ),
                   TextSpan(
@@ -58,11 +58,11 @@ class CodeDecorations extends StatelessWidget {
                     style: TextStyle(color: AppColors.mutedText),
                   ),
                   TextSpan(
-                    text: 'PortfolioApp',
+                    text: 'ship()',
                     style: TextStyle(color: AppColors.emerald),
                   ),
                   TextSpan(
-                    text: '());',
+                    text: ';',
                     style: TextStyle(color: AppColors.mutedText),
                   ),
                 ],
