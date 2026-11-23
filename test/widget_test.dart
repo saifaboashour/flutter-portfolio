@@ -65,6 +65,8 @@ void main() {
     expect(cvButton.onPressed, isNotNull);
     expect(PortfolioData.profile.hasCv, isTrue);
 
+    await tester.ensureVisible(find.text('Mobile CV (PDF)'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('Mobile CV (PDF)'));
     await tester.pumpAndSettle();
 
