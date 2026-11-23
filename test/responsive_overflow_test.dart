@@ -47,7 +47,7 @@ void main() {
         reason: 'Unexpected overflow at ${entry.key}px: $overflow',
       );
 
-      expect(find.text('Download CV'), findsOneWidget);
+      expect(find.text('Mobile CV (PDF)'), findsOneWidget);
       expect(find.text('View Projects'), findsWidgets);
     });
   }
@@ -70,7 +70,7 @@ void main() {
     await tester.pump();
 
     expect(find.text('Seif Abuashour'), findsWidgets);
-    expect(find.text('Download CV'), findsOneWidget);
+    expect(find.text('Mobile CV (PDF)'), findsOneWidget);
     expect(find.byTooltip('Menu'), findsOneWidget);
   });
 
