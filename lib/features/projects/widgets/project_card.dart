@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../core/content/portfolio_models.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_spacing.dart';
+import '../../../core/utils/external_navigator.dart';
 
 class ProjectCard extends StatefulWidget {
   const ProjectCard({super.key, required this.project});
@@ -120,13 +121,13 @@ class _ProjectCardState extends State<ProjectCard> {
                       children: [
                         if (project.liveUrl != null)
                           TextButton.icon(
-                            onPressed: () {},
+                            onPressed: () => ExternalNavigator.openUri(Uri.parse(project.liveUrl!)),
                             icon: const Icon(Icons.open_in_new, size: 18),
                             label: const Text('Live'),
                           ),
                         if (project.repoUrl != null)
                           TextButton.icon(
-                            onPressed: () {},
+                            onPressed: () => ExternalNavigator.openUri(Uri.parse(project.repoUrl!)),
                             icon: const Icon(Icons.code, size: 18),
                             label: const Text('Code'),
                           ),
