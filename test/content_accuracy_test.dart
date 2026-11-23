@@ -34,7 +34,7 @@ void main() {
     expect(byOrg['Fz3a']!.role, 'Mobile Developer');
     expect(byOrg['Fz3a']!.period, '2019 – 2020');
 
-    expect(byOrg['Freelance']!.role, 'Software & Mobile Developer');
+    expect(byOrg['Freelance']!.role, 'Full-Stack & Mobile Software Developer');
     expect(byOrg['Freelance']!.period, contains('2015 – Present'));
     expect(byOrg['Freelance']!.period.toLowerCase(), contains('intermittent'));
   });
