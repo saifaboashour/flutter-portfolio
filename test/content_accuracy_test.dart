@@ -44,10 +44,13 @@ void main() {
     expect(titles, containsAll(['Truckin Central', 'VaxBuddy']));
 
     for (final project in profile.projects) {
-      expect(project.liveUrl, isNull);
-      expect(project.repoUrl, isNull);
       expect(project.imageAsset, isNull);
+      if (project.repoUrl != null) {
+        expect(project.repoUrl, startsWith('https://github.com/saifaboashour/'));
+      }
     }
+
+    expect(titles, containsAll(['Mofeed', 'TimmiBook', 'Mate', 'Wolf CEO', 'Taz']));
 
     final truckin =
         profile.projects.firstWhere((p) => p.title == 'Truckin Central');
