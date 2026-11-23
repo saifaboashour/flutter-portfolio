@@ -38,7 +38,7 @@ class HomeSection extends StatelessWidget {
   Future<void> _emailMe(BuildContext context) async {
     final opened = await ExternalNavigator.openMailto(
       profile.email,
-      subject: 'Flutter / mobile opportunity',
+      subject: 'Software engineering opportunity',
     );
     if (!context.mounted) return;
     if (!opened) {
@@ -165,13 +165,13 @@ class HomeSection extends StatelessWidget {
                     enabled: profile.hasCv,
                     child: Tooltip(
                       message: profile.hasCv
-                          ? 'Download CV (PDF)'
+                          ? 'Download mobile-focused CV (PDF)'
                           : 'CV file not available yet',
                       child: OutlinedButton.icon(
                         onPressed:
                             profile.hasCv ? () => _downloadCv(context) : null,
                         icon: const Icon(Icons.download_outlined, size: 20),
-                        label: const Text('Download CV'),
+                        label: const Text('Mobile CV (PDF)'),
                       ),
                     ),
                   ),
