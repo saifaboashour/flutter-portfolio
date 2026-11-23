@@ -1,6 +1,6 @@
-# Seif Abuashour — Flutter Portfolio
+# Seif Abuashour — Software Engineering Portfolio
 
-Personal Flutter Web portfolio for **Seif Abuashour**, Senior Flutter Developer and Mobile Application Engineer.
+Personal Flutter Web portfolio for **Seif Abuashour**, Full-Stack Software Engineer and Mobile Application Developer.
 
 **Live site:** [https://saifaboashour.github.io/flutter-portfolio/](https://saifaboashour.github.io/flutter-portfolio/)
 
@@ -91,3 +91,9 @@ The workflow runs `flutter analyze`, `flutter test`, then builds with `--base-hr
 ## License
 
 Private / personal portfolio — all rights reserved unless otherwise noted.
+
+## Selected work
+
+The portfolio showcases full-stack and mobile projects including **Mofeed, VaxBuddy, TimmiBook, Mate, Truckin Central, Sprigg, Wolf CEO, Taz, and this portfolio**. Private client and personal codebases remain private; the site focuses on individual contributions and high-level technologies.
+
+**Note:** The current CV download is the mobile-focused PDF. A separate full-stack resume can be added after review.
