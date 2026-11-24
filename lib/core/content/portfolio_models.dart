@@ -76,6 +76,8 @@ class PortfolioProfile {
     this.linkedInUrl,
     this.cvPublicPath,
     this.cvDownloadFileName,
+    this.fullStackCvPublicPath,
+    this.cyberCvPublicPath,
   });
 
   final String name;
@@ -100,6 +102,8 @@ class PortfolioProfile {
 
   /// Suggested download filename for the CV.
   final String? cvDownloadFileName;
+  final String? fullStackCvPublicPath;
+  final String? cyberCvPublicPath;
 
   bool get hasCv => cvPublicPath != null && cvPublicPath!.isNotEmpty;
 

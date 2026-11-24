@@ -5,6 +5,7 @@ enum PortfolioSection {
   about,
   experience,
   projects,
+  cybersecurity,
   skills,
   contact,
 }
@@ -15,6 +16,7 @@ extension PortfolioSectionX on PortfolioSection {
         PortfolioSection.about => 'About',
         PortfolioSection.experience => 'Experience',
         PortfolioSection.projects => 'Projects',
+        PortfolioSection.cybersecurity => 'Cybersecurity',
         PortfolioSection.skills => 'Skills',
         PortfolioSection.contact => 'Contact',
       };
@@ -24,6 +26,7 @@ extension PortfolioSectionX on PortfolioSection {
         PortfolioSection.about => Icons.person_outline,
         PortfolioSection.experience => Icons.work_outline,
         PortfolioSection.projects => Icons.apps_outlined,
+        PortfolioSection.cybersecurity => Icons.security_outlined,
         PortfolioSection.skills => Icons.bolt_outlined,
         PortfolioSection.contact => Icons.mail_outline,
       };

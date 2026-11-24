@@ -75,7 +75,16 @@ class _ProjectCardState extends State<ProjectCard> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(project.title, style: textTheme.titleLarge),
+                  Wrap(
+                    spacing: AppSpacing.sm,
+                    runSpacing: AppSpacing.xs,
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    children: [
+                      Text(project.title, style: textTheme.titleLarge),
+                      if (project.status != null)
+                        Chip(label: Text(project.status!), visualDensity: VisualDensity.compact),
+                    ],
+                  ),
                   const SizedBox(height: 4),
                   Text(
                     project.category,
@@ -117,13 +126,27 @@ class _ProjectCardState extends State<ProjectCard> {
                   ),
                   if (project.hasExternalLinks) ...[
                     const SizedBox(height: AppSpacing.md),
-                    Row(
+                    Wrap(
+                      spacing: AppSpacing.xs,
+                      runSpacing: AppSpacing.xs,
                       children: [
                         if (project.liveUrl != null)
                           TextButton.icon(
                             onPressed: () => ExternalNavigator.openUri(Uri.parse(project.liveUrl!)),
                             icon: const Icon(Icons.open_in_new, size: 18),
                             label: const Text('Live'),
+                          ),
+                        if (project.appStoreUrl != null)
+                          TextButton.icon(
+                            onPressed: () => ExternalNavigator.openUri(Uri.parse(project.appStoreUrl!)),
+                            icon: const Icon(Icons.apple, size: 18),
+                            label: const Text('App Store'),
+                          ),
+                        if (project.playStoreUrl != null)
+                          TextButton.icon(
+                            onPressed: () => ExternalNavigator.openUri(Uri.parse(project.playStoreUrl!)),
+                            icon: const Icon(Icons.shop_outlined, size: 18),
+                            label: const Text('Google Play'),
                           ),
                         if (project.repoUrl != null)
                           TextButton.icon(

@@ -16,7 +16,7 @@ class SkillsSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SectionHeader(
-          indexLabel: '04.',
+          indexLabel: '05.',
           title: 'Skills',
           subtitle: 'Tools and practices used across delivery work.',
         ),

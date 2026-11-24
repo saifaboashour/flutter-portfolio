@@ -11,6 +11,7 @@ import '../features/experience/experience_section.dart';
 import '../features/home/home_section.dart';
 import '../features/projects/projects_section.dart';
 import '../features/skills/skills_section.dart';
+import '../features/cybersecurity/cybersecurity_section.dart';
 import '../shared/widgets/mobile_navigation.dart';
 import '../shared/widgets/section_block.dart';
 import '../shared/widgets/side_navigation.dart';
@@ -199,6 +200,10 @@ class PortfolioPageState extends State<PortfolioPage> {
                     SectionBlock(
                       sectionKey: _sectionKeys[PortfolioSection.projects]!,
                       child: ProjectsSection(projects: _profile.projects),
+                    ),
+                    SectionBlock(
+                      sectionKey: _sectionKeys[PortfolioSection.cybersecurity]!,
+                      child: const CybersecuritySection(),
                     ),
                     SectionBlock(
                       sectionKey: _sectionKeys[PortfolioSection.skills]!,
