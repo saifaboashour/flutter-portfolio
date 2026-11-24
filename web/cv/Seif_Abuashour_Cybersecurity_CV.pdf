@@ -1,0 +1,87 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 4304 >>
+stream
+BT /F1 18 Tf 50 766 Td (Seif Abuashour) Tj ET
+BT /F1 9.2 Tf 50 739 Td (Amman, Jordan | saifaboashour98@gmail.com | github.com/saifaboashour) Tj ET
+BT /F1 9.2 Tf 50 725 Td (linkedin.com/in/seif-abuashour-4632aa163/ | saifaboashour.github.io/flutter-portfolio/) Tj ET
+BT /F1 11 Tf 50 711 Td (CYBER THREAT INTELLIGENCE | OSINT | SECURITY AUTOMATION) Tj ET
+BT /F1 11 Tf 50 688 Td (PROFILE) Tj ET
+BT /F1 9.2 Tf 50 665 Td (Software engineer transitioning into cybersecurity through independent CTI research and) Tj ET
+BT /F1 9.2 Tf 50 651 Td (hands-on security automation. Strong experience with programming, databases, Docker,) Tj ET
+BT /F1 9.2 Tf 50 637 Td (investigation workflows, scripting and technical problem-solving. Seeking CTI, security) Tj ET
+BT /F1 9.2 Tf 50 623 Td (research, security automation and suitable analyst positions. Cybersecurity work described) Tj ET
+BT /F1 9.2 Tf 50 609 Td (here is lab/research experience, not formal SOC employment.) Tj ET
+BT /F1 11 Tf 50 595 Td (SECURITY SKILLS AND TOOLS) Tj ET
+BT /F1 9.2 Tf 50 572 Td (Cyber Threat Intelligence: OSINT source collection, triage, verification, regional threat) Tj ET
+BT /F1 9.2 Tf 50 558 Td (monitoring, IOC analysis, MISP event organization, CVE-to-advisory relationships, indicator) Tj ET
+BT /F1 9.2 Tf 50 544 Td (enrichment.) Tj ET
+BT /F1 9.2 Tf 50 530 Td (Automation: n8n, PostgreSQL, Docker Compose, Python, APIs, data normalization, scheduled) Tj ET
+BT /F1 9.2 Tf 50 516 Td (workflows and backups.) Tj ET
+BT /F1 9.2 Tf 50 502 Td (Technical foundations: reverse engineering, CTF problem-solving, black-box web security) Tj ET
+BT /F1 9.2 Tf 50 488 Td (methodology, Linux, Docker, software development and log-oriented troubleshooting.) Tj ET
+BT /F1 11 Tf 50 474 Td (INDEPENDENT CYBERSECURITY PROJECTS) Tj ET
+BT /F1 9.2 Tf 50 451 Td (GetIntel CTI Collection Pipeline | Independent research. Built a security reporting collection) Tj ET
+BT /F1 9.2 Tf 50 437 Td (and normalization pipeline with a registry of 54 sources; reviewed over 1,000 leads in) Tj ET
+BT /F1 9.2 Tf 50 423 Td (testing. Focus on Middle East regional threat reporting, claim validation and analyst triage.) Tj ET
+BT /F1 9.2 Tf 50 409 Td (n8n CTI Automation Lab | Independent security engineering. Built Docker Compose lab with n8n) Tj ET
+BT /F1 9.2 Tf 50 395 Td (and PostgreSQL, backups, advisory/CVE relational tables, and automated ingestion/enrichment) Tj ET
+BT /F1 9.2 Tf 50 381 Td (experiments.) Tj ET
+BT /F1 9.2 Tf 50 367 Td (MISP Threat Intelligence Practice | Self-hosted MISP in Docker. Created threat intelligence) Tj ET
+BT /F1 9.2 Tf 50 353 Td (events and explored relationships between research findings, indicators and supporting) Tj ET
+BT /F1 9.2 Tf 50 339 Td (evidence.) Tj ET
+BT /F1 9.2 Tf 50 325 Td (OSINT & Reverse Engineering | Applied authorized open-source investigations, CTF) Tj ET
+BT /F1 9.2 Tf 50 311 Td (reverse-engineering experience and structured black-box assessment scoping.) Tj ET
+BT /F1 11 Tf 50 297 Td (PROFESSIONAL ENGINEERING EXPERIENCE) Tj ET
+BT /F1 9.2 Tf 50 274 Td (DevNas | Application Developer | Sep 2025 - Oct 2026. Production mobile engineering, API) Tj ET
+BT /F1 9.2 Tf 50 260 Td (integration, debugging and release processes.) Tj ET
+BT /F1 9.2 Tf 50 246 Td (Truckin Central | Flutter Developer | Mar 2022 - Sep 2025. Mobile architecture, production) Tj ET
+BT /F1 9.2 Tf 50 232 Td (debugging, API troubleshooting and technical collaboration.) Tj ET
+BT /F1 9.2 Tf 50 218 Td (Emperor Soft | Team Leader | 2020 - 2021. Technical problem solving, reviews and team) Tj ET
+BT /F1 9.2 Tf 50 204 Td (coordination.) Tj ET
+BT /F1 9.2 Tf 50 190 Td (Fz3a | Mobile Developer | 2019 - 2020. Software engineering.) Tj ET
+BT /F1 9.2 Tf 50 176 Td (Freelance | Software Developer | 2015 - Present \(intermittent\). Backend integration,) Tj ET
+BT /F1 9.2 Tf 50 162 Td (deployment, applications and infrastructure.) Tj ET
+BT /F1 11 Tf 50 148 Td (EDUCATION AND DEVELOPMENT) Tj ET
+BT /F1 9.2 Tf 50 125 Td (Bachelor of Science in Computer Science | Yarmouk University | 2016 - 2020.) Tj ET
+BT /F1 9.2 Tf 50 111 Td (Practical Malware Analysis & Triage \(PMAT\) training, 2026. Cybersecurity labs and independent) Tj ET
+BT /F1 9.2 Tf 50 97 Td (research; no unsupported certification claim.) Tj ET
+BT /F1 11 Tf 50 83 Td (LANGUAGES) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 97 >>
+stream
+BT /F1 9.2 Tf 50 766 Td (Arabic \(native\); English \(professional working proficiency\).) Tj ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000317 00000 n 
+0000004672 00000 n 
+0000004798 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4944
+%%EOF
