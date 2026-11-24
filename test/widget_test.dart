@@ -5,10 +5,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_portfolio/app/app.dart';
 import 'package:flutter_portfolio/app/portfolio_page.dart';
 import 'package:flutter_portfolio/core/content/portfolio_data.dart';
-import 'package:flutter_portfolio/core/content/portfolio_models.dart';
 import 'package:flutter_portfolio/core/utils/external_navigator.dart';
 import 'package:flutter_portfolio/features/contact/contact_section.dart';
-import 'package:flutter_portfolio/features/home/home_section.dart';
 
 void main() {
   tearDown(ExternalNavigator.reset);
