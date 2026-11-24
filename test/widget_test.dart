@@ -23,7 +23,7 @@ void main() {
     expect(find.textContaining('Full-Stack Software Engineer'), findsWidgets);
     expect(find.text('View Projects'), findsOneWidget);
     expect(find.text('Contact Me'), findsOneWidget);
-    expect(find.text('Mobile CV (PDF)'), findsOneWidget);
+    expect(find.text('Download CV'), findsOneWidget);
     expect(find.text('About'), findsWidgets);
     expect(find.text('Experience'), findsWidgets);
     expect(find.text('Projects'), findsWidgets);
@@ -48,63 +48,23 @@ void main() {
     expect(find.text('LinkedIn (optional)'), findsOneWidget);
   });
 
-  testWidgets('Download CV is enabled when public CV path is configured',
-      (tester) async {
+  testWidgets('Download CV menu exposes three targeted PDFs', (tester) async {
     final launched = <Uri>[];
     ExternalNavigator.launch = (uri, {bool preferDownload = false}) async {
       launched.add(uri);
       return true;
     };
-
     await tester.pumpWidget(const PortfolioApp());
     await tester.pumpAndSettle();
-
-    final cvButton = tester.widget<OutlinedButton>(
-      find.widgetWithText(OutlinedButton, 'Mobile CV (PDF)'),
-    );
-    expect(cvButton.onPressed, isNotNull);
-    expect(PortfolioData.profile.hasCv, isTrue);
-
-    await tester.ensureVisible(find.text('Mobile CV (PDF)'));
+    await tester.tap(find.text('Download CV'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Mobile CV (PDF)'));
+    expect(find.text('Mobile CV (PDF)'), findsOneWidget);
+    expect(find.text('Full-Stack CV (PDF)'), findsOneWidget);
+    expect(find.text('Cybersecurity CV (PDF)'), findsOneWidget);
+    await tester.tap(find.text('Cybersecurity CV (PDF)'));
     await tester.pumpAndSettle();
-
-    expect(launched, isNotEmpty);
-    expect(launched.last.path, contains('Seif_Abuashour_CV.pdf'));
+    expect(launched.last.path, contains('Seif_Abuashour_Cybersecurity_CV.pdf'));
   });
-
-  testWidgets('Download CV stays disabled without a CV path', (tester) async {
-    const profile = PortfolioProfile(
-      name: 'Seif Abuashour',
-      title: 'Senior Flutter Developer',
-      subtitle: 'Mobile Application Engineer',
-      location: 'Amman, Jordan',
-      email: 'saifaboashour98@gmail.com',
-      aboutSummary: 'Summary',
-      experiences: [],
-      projects: [],
-      skillCategories: [],
-    );
-
-    await tester.pumpWidget(
-      MaterialApp(
-        home: Scaffold(
-          body: HomeSection(
-            profile: profile,
-            onViewProjects: () {},
-          ),
-        ),
-      ),
-    );
-    await tester.pumpAndSettle();
-
-    final cvButton = tester.widget<OutlinedButton>(
-      find.widgetWithText(OutlinedButton, 'Mobile CV (PDF)'),
-    );
-    expect(cvButton.onPressed, isNull);
-  });
-
   testWidgets('Contact Me opens mailto for the profile email', (tester) async {
     final launched = <Uri>[];
     ExternalNavigator.launch = (uri, {bool preferDownload = false}) async {

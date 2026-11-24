@@ -16,8 +16,7 @@ class HomeSection extends StatelessWidget {
   final PortfolioProfile profile;
   final VoidCallback onViewProjects;
 
-  Future<void> _downloadCv(BuildContext context) async {
-    final path = profile.cvPublicPath;
+  Future<void> _downloadCv(BuildContext context, String? path) async {
     if (path == null) return;
 
     final opened = await ExternalNavigator.openSiteRelative(
@@ -157,22 +156,23 @@ class HomeSection extends StatelessWidget {
                     icon: const Icon(Icons.mail_outline, size: 20),
                     label: const Text('Contact Me'),
                   ),
-                  Semantics(
-                    button: true,
-                    label: profile.hasCv
-                        ? 'Download CV as PDF'
-                        : 'Download CV unavailable',
-                    enabled: profile.hasCv,
-                    child: Tooltip(
-                      message: profile.hasCv
-                          ? 'Download mobile-focused CV (PDF)'
-                          : 'CV file not available yet',
-                      child: OutlinedButton.icon(
-                        onPressed:
-                            profile.hasCv ? () => _downloadCv(context) : null,
-                        icon: const Icon(Icons.download_outlined, size: 20),
-                        label: const Text('Mobile CV (PDF)'),
-                      ),
+                  PopupMenuButton<String>(
+                    tooltip: 'Download a targeted CV',
+                    enabled: profile.hasCv ||
+                        profile.fullStackCvPublicPath != null ||
+                        profile.cyberCvPublicPath != null,
+                    onSelected: (path) => _downloadCv(context, path),
+                    itemBuilder: (context) => [
+                      if (profile.cvPublicPath != null)
+                        PopupMenuItem(value: profile.cvPublicPath!, child: const Text('Mobile CV (PDF)')),
+                      if (profile.fullStackCvPublicPath != null)
+                        PopupMenuItem(value: profile.fullStackCvPublicPath!, child: const Text('Full-Stack CV (PDF)')),
+                      if (profile.cyberCvPublicPath != null)
+                        PopupMenuItem(value: profile.cyberCvPublicPath!, child: const Text('Cybersecurity CV (PDF)')),
+                    ],
+                    child: const Chip(
+                      avatar: Icon(Icons.download_outlined, size: 20),
+                      label: Text('Download CV'),
                     ),
                   ),
                 ],

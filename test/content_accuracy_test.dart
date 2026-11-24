@@ -44,7 +44,9 @@ void main() {
     expect(titles, containsAll(['Truckin Central', 'VaxBuddy']));
 
     for (final project in profile.projects) {
-      expect(project.imageAsset, isNull);
+      if (project.imageAsset != null) {
+        expect(project.imageAsset, startsWith('assets/projects/'));
+      }
       if (project.repoUrl != null) {
         expect(project.repoUrl, startsWith('https://github.com/saifaboashour/'));
       }

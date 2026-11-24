@@ -13,6 +13,8 @@ abstract final class PortfolioData {
     // The existing downloadable PDF is the mobile-focused resume.
     cvPublicPath: 'cv/Seif_Abuashour_CV.pdf',
     cvDownloadFileName: 'Seif_Abuashour_CV.pdf',
+    fullStackCvPublicPath: 'cv/Seif_Abuashour_Full_Stack_CV.pdf',
+    cyberCvPublicPath: 'cv/Seif_Abuashour_Cybersecurity_CV.pdf',
     aboutSummary:
         'Full-Stack Software Engineer with 6+ years of broader software '
         'development experience, specializing in Flutter while also building '
