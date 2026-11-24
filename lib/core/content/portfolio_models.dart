@@ -24,6 +24,9 @@ class ProjectItem {
     required this.technologies,
     this.contribution,
     this.imageAsset,
+    this.status,
+    this.appStoreUrl,
+    this.playStoreUrl,
     this.liveUrl,
     this.repoUrl,
   });
@@ -34,6 +37,9 @@ class ProjectItem {
   final String? contribution;
   final List<String> technologies;
   final String? imageAsset;
+  final String? status;
+  final String? appStoreUrl;
+  final String? playStoreUrl;
 
   /// Only set when a verified public URL is available.
   final String? liveUrl;
@@ -41,7 +47,8 @@ class ProjectItem {
   /// Only set when a verified public repository URL is available.
   final String? repoUrl;
 
-  bool get hasExternalLinks => liveUrl != null || repoUrl != null;
+  bool get hasExternalLinks =>
+      liveUrl != null || repoUrl != null || appStoreUrl != null || playStoreUrl != null;
 }
 
 class SkillCategory {

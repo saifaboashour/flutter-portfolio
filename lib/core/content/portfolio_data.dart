@@ -5,7 +5,7 @@ abstract final class PortfolioData {
   static const profile = PortfolioProfile(
     name: 'Seif Abuashour',
     title: 'Full-Stack Software Engineer',
-    subtitle: 'Web, Backend & Mobile Development · Flutter Specialist',
+    subtitle: 'Flutter & Full-Stack Engineering · Cybersecurity & CTI',
     location: 'Amman, Jordan',
     email: 'saifaboashour98@gmail.com',
     githubUrl: 'https://github.com/saifaboashour',
@@ -20,12 +20,15 @@ abstract final class PortfolioData {
         'with Node.js, NestJS, React, Next.js, TypeScript, and databases '
         'including PostgreSQL, MySQL, MongoDB, and Supabase.\n\n'
         'My projects span healthcare, transportation, booking, education, '
-        'and business tools. As a freelancer and independent developer, '
+        'and business tools. Alongside engineering, I build independent ' 
+        'threat intelligence pipelines, OSINT investigations, and security ' 
+        'automation labs. As a freelancer and independent developer, '
         'I have owned architecture, frontend and backend implementation, '
         'API integrations, deployment, and ongoing maintenance. In employed '
         'roles I have delivered production mobile apps and collaborated '
         'with backend teams to diagnose and resolve issues.\n\n'
-        'I value maintainable architecture, practical testing, clear '
+        'My cybersecurity portfolio reflects hands-on projects and research, ' 
+        'not claimed SOC employment. I value maintainable architecture, practical testing, clear '
         'communication, and delivering software end to end.',
     experiences: [
       ExperienceItem(
@@ -83,19 +86,21 @@ abstract final class PortfolioData {
         title: 'Mofeed',
         category: 'Full-Stack + Mobile · Client project',
         description:
-            'Multi-surface product with web, backend, and mobile applications.',
+            'Research participation platform for discovering studies, answering questionnaires, and supporting researcher workflows.',
         contribution:
             'Responsible for all technical implementation: frontend, NestJS backend, mobile applications, integrations, and deployment. Work remains under development and client review.',
         technologies: ['NestJS', 'Web frontend', 'Flutter', 'REST APIs', 'Deployment'],
+        status: 'In development',
       ),
       ProjectItem(
         title: 'TimmiBook',
         category: 'Full-Stack Web · Independent product',
         description:
-            'Booking-focused web application developed as an independent product.',
+            'Appointment scheduling and booking platform for service providers and customers.',
         contribution:
             'Owner and sole developer. Built the application across product planning, frontend, backend integration, and testing. The repository includes Next.js, React, TypeScript, Supabase, Vitest, and Playwright.',
         technologies: ['Next.js', 'React', 'TypeScript', 'Supabase', 'Playwright'],
+        imageAsset: 'assets/projects/timmibook.png',
       ),
       ProjectItem(
         title: 'VaxBuddy',
@@ -105,6 +110,10 @@ abstract final class PortfolioData {
         contribution:
             'Worked on the mobile application, web frontend, and Node.js backend, including API integrations, reminder scheduling, deployment, and maintenance.',
         technologies: ['Flutter', 'Node.js', 'Web frontend', 'REST APIs', 'Scheduled jobs'],
+        status: 'Published',
+        liveUrl: 'https://vaxbuddy.com/',
+        appStoreUrl: 'https://apps.apple.com/jo/app/vaxbuddy/id6758889655',
+        playStoreUrl: 'https://play.google.com/store/apps/details?id=com.elm4g0.vaxbuddy',
       ),
       ProjectItem(
         title: 'Mate',
@@ -114,6 +123,7 @@ abstract final class PortfolioData {
         contribution:
             'Owned the product and extensively modified an existing CodeCanyon-based first version using Laravel and Firebase. Later developed a separate Node.js/Express backend using MySQL and Socket.IO; source remains private.',
         technologies: ['Laravel', 'Firebase', 'Node.js', 'Express', 'MySQL', 'Socket.IO'],
+        imageAsset: 'assets/projects/mate.png',
       ),
       ProjectItem(
         title: 'Truckin Central',
@@ -126,12 +136,14 @@ abstract final class PortfolioData {
       ),
       ProjectItem(
         title: 'Sprigg',
-        category: 'Mobile · Professional / portfolio work',
+        category: 'Native iOS · Independent finance product',
         description:
-            'Mobile application included in my selected professional project history.',
+            'iOS personal finance app for tracking expenses, budgets, savings goals, and subscriptions.',
         contribution:
-            'Contributed Flutter/mobile development work. Further technical case-study details can be provided without exposing private code.',
-        technologies: ['Mobile development', 'Flutter'],
+            'Developed native SwiftUI and SwiftData personal-finance workflows and budget dashboards, with original mascot assets and local-first design.',
+        technologies: ['Swift', 'SwiftUI', 'SwiftData', 'iOS', 'Personal finance'],
+        imageAsset: 'assets/projects/sprigg.png',
+        status: 'In development',
       ),
       ProjectItem(
         title: 'Wolf CEO',
@@ -141,6 +153,7 @@ abstract final class PortfolioData {
         contribution:
             'Designed and developed the native iOS MVP using SwiftUI and SwiftData, with optional iCloud synchronization considered in the architecture.',
         technologies: ['Swift', 'SwiftUI', 'SwiftData', 'iOS'],
+        status: 'TestFlight',
       ),
       ProjectItem(
         title: 'Taz',
@@ -150,6 +163,7 @@ abstract final class PortfolioData {
         contribution:
             'Implemented Flutter application screens and reusable components with a focus on simple daily workflows.',
         technologies: ['Flutter', 'Dart', 'iOS', 'Android'],
+        status: 'In development',
         repoUrl: 'https://github.com/saifaboashour/taz',
       ),
       ProjectItem(
@@ -188,6 +202,10 @@ abstract final class PortfolioData {
       SkillCategory(
         title: 'Architecture & quality',
         skills: ['Clean Architecture', 'State management', 'Unit testing', 'Widget testing', 'Integration / E2E testing', 'Code review', 'Debugging', 'Documentation'],
+      ),
+      SkillCategory(
+        title: 'Cybersecurity & CTI practice',
+        skills: ['Cyber Threat Intelligence', 'OSINT', 'MISP', 'n8n automation', 'IOC enrichment', 'Docker labs', 'Reverse engineering', 'Security testing'],
       ),
       SkillCategory(
         title: 'Mobile integrations',
