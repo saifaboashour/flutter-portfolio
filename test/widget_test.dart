@@ -54,6 +54,8 @@ void main() {
     };
     await tester.pumpWidget(const PortfolioApp());
     await tester.pumpAndSettle();
+    await tester.ensureVisible(find.text('Download CV'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('Download CV'));
     await tester.pumpAndSettle();
     expect(find.text('Mobile CV (PDF)'), findsOneWidget);
