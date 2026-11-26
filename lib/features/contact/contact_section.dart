@@ -26,7 +26,7 @@ class ContactSection extends StatelessWidget {
   Future<void> _emailMe(BuildContext context) async {
     final opened = await ExternalNavigator.openMailto(
       profile.email,
-      subject: 'Software engineering opportunity',
+      subject: 'Project inquiry / technical partnership',
     );
     if (!context.mounted) return;
     if (!opened) {
@@ -72,7 +72,7 @@ class ContactSection extends StatelessWidget {
         const SectionHeader(
           indexLabel: '05.',
           title: 'Contact',
-          subtitle: 'Open to full-stack, backend, and mobile opportunities.',
+          subtitle: 'Available for independent projects, technical partnerships, and professional opportunities.',
         ),
         const SizedBox(height: AppSpacing.lg),
         Container(
@@ -94,13 +94,15 @@ class ContactSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Let's build something solid.",
+                "Let's discuss your project.",
                 style: textTheme.headlineMedium,
               ),
               const SizedBox(height: AppSpacing.md),
               Text(
-                'Reach out for full-stack, backend, or mobile engineering opportunities. '
-                'You can also explore selected work through GitHub.',
+                'Whether you are launching a product, improving an existing system, '
+                'or looking for a reliable engineering partner, I can help with '
+                'mobile apps, web platforms, backend APIs, automation, and maintenance. '
+                'Share your project goals, current stage, and expected timeline so we can discuss the next steps.',
                 style: textTheme.bodyLarge?.copyWith(
                   color: AppColors.mutedText,
                 ),
@@ -124,7 +126,7 @@ class ContactSection extends StatelessWidget {
                     child: FilledButton.icon(
                       onPressed: () => _emailMe(context),
                       icon: const Icon(Icons.mail_outline, size: 20),
-                      label: const Text('Email Me'),
+                      label: const Text('Send Project Inquiry'),
                     ),
                   ),
                   Semantics(
@@ -162,7 +164,7 @@ class ContactSection extends StatelessWidget {
                     failureMessage: 'Unable to open LinkedIn.',
                   ),
                   child: Text(
-                    'LinkedIn (optional)',
+                    'Connect on LinkedIn',
                     style: textTheme.bodyMedium?.copyWith(
                       color: AppColors.mutedText,
                       decoration: TextDecoration.underline,
