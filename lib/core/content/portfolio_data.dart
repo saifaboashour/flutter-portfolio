@@ -4,8 +4,8 @@ import 'portfolio_models.dart';
 abstract final class PortfolioData {
   static const profile = PortfolioProfile(
     name: 'Seif Abuashour',
-    title: 'Full-Stack Software Engineer',
-    subtitle: 'Flutter & Full-Stack Engineering · Cybersecurity & CTI',
+    title: 'Senior Full-Stack Software Engineer',
+    subtitle: 'Full-Stack & Mobile Development · Independent CTI Researcher',
     location: 'Amman, Jordan',
     email: 'saifaboashour98@gmail.com',
     githubUrl: 'https://github.com/saifaboashour',
@@ -16,7 +16,7 @@ abstract final class PortfolioData {
     fullStackCvPublicPath: 'cv/Seif_Abuashour_Full_Stack_CV.pdf',
     cyberCvPublicPath: 'cv/Seif_Abuashour_Cybersecurity_CV.pdf',
     aboutSummary:
-        'Full-Stack Software Engineer with 6+ years of broader software '
+        'Senior Full-Stack Software Engineer with 6+ years of broader software '
         'development experience, specializing in Flutter while also building '
         'web applications, backend services, and complete products. I work '
         'with Node.js, NestJS, React, Next.js, TypeScript, and databases '
@@ -29,8 +29,8 @@ abstract final class PortfolioData {
         'API integrations, deployment, and ongoing maintenance. In employed '
         'roles I have delivered production mobile apps and collaborated '
         'with backend teams to diagnose and resolve issues.\n\n'
-        'My cybersecurity portfolio reflects hands-on projects and research, ' 
-        'not claimed SOC employment. I value maintainable architecture, practical testing, clear '
+        'My independent CTI research focuses on regional threats, evidence-based analysis, and reproducible methods. '
+        'I value maintainable architecture, practical testing, clear '
         'communication, and delivering software end to end.',
     experiences: [
       ExperienceItem(
