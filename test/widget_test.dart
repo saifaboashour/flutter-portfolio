@@ -20,7 +20,7 @@ void main() {
     expect(find.text(profile.name), findsWidgets);
     expect(find.textContaining('Full-Stack Software Engineer'), findsWidgets);
     expect(find.text('View Projects'), findsOneWidget);
-    expect(find.text('Contact Me'), findsOneWidget);
+    expect(find.text('Discuss Your Project'), findsOneWidget);
     expect(find.text('Download CV'), findsOneWidget);
     expect(find.text('About'), findsWidgets);
     expect(find.text('Experience'), findsWidgets);
@@ -43,7 +43,7 @@ void main() {
     expect(find.text('Truckin Central'), findsWidgets);
     expect(find.text('VaxBuddy'), findsWidgets);
     expect(find.text('GitHub'), findsOneWidget);
-    expect(find.text('LinkedIn (optional)'), findsOneWidget);
+    expect(find.text('Connect on LinkedIn'), findsOneWidget);
   });
 
   testWidgets('Download CV menu exposes three targeted PDFs', (tester) async {
@@ -65,7 +65,7 @@ void main() {
     await tester.pumpAndSettle();
     expect(launched.last.path, contains('Seif_Abuashour_Cybersecurity_CV.pdf'));
   });
-  testWidgets('Contact Me opens mailto for the profile email', (tester) async {
+  testWidgets('Discuss Your Project opens mailto for the profile email', (tester) async {
     final launched = <Uri>[];
     ExternalNavigator.launch = (uri, {bool preferDownload = false}) async {
       launched.add(uri);
@@ -75,15 +75,17 @@ void main() {
     await tester.pumpWidget(const PortfolioApp());
     await tester.pumpAndSettle();
 
-    await tester.tap(find.text('Contact Me'));
+    await tester.tap(find.text('Discuss Your Project'));
     await tester.pumpAndSettle();
 
     expect(launched, isNotEmpty);
     expect(launched.last.scheme, 'mailto');
     expect(launched.last.path, PortfolioData.profile.email);
+    expect(launched.last.queryParameters['subject'],
+        'Project inquiry / technical partnership');
   });
 
-  testWidgets('Email Me and GitHub use expected destinations', (tester) async {
+  testWidgets('Send Project Inquiry and GitHub use expected destinations', (tester) async {
     final launched = <Uri>[];
     ExternalNavigator.launch = (uri, {bool preferDownload = false}) async {
       launched.add(uri);
@@ -101,7 +103,7 @@ void main() {
     );
     await tester.pump();
 
-    await tester.tap(find.text('Email Me'));
+    await tester.tap(find.text('Send Project Inquiry'));
     await tester.pump();
     expect(launched.last.scheme, 'mailto');
     expect(launched.last.path, 'saifaboashour98@gmail.com');
@@ -113,7 +115,7 @@ void main() {
       'https://github.com/saifaboashour',
     );
 
-    await tester.tap(find.text('LinkedIn (optional)'));
+    await tester.tap(find.text('Connect on LinkedIn'));
     await tester.pump();
     expect(
       launched.last.toString(),
