@@ -62,9 +62,16 @@ class HomeSection extends StatelessWidget {
       child: Stack(
         children: [
           const Positioned.fill(child: FlutterGeometryBackdrop()),
-          Column(
+          LayoutBuilder(
+            builder: (context, constraints) {
+              final sideBySide = constraints.maxWidth >= 760;
+              final intro = Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              if (!sideBySide) ...[
+                const Center(child: _ProfileAvatar(size: 112)),
+                const SizedBox(height: AppSpacing.lg),
+              ],
               const CodeDecorations(),
               const SizedBox(height: AppSpacing.xl),
               Text(
@@ -186,9 +193,50 @@ class HomeSection extends StatelessWidget {
               ),
 
             ],
+              );
+              if (!sideBySide) return intro;
+              return Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(child: intro),
+                  const SizedBox(width: AppSpacing.xl),
+                  const Padding(
+                    padding: EdgeInsets.only(top: AppSpacing.xl),
+                    child: _ProfileAvatar(size: 200),
+                  ),
+                ],
+              );
+            },
           ),
         ],
       ),
     );
   }
+}
+
+class _ProfileAvatar extends StatelessWidget {
+  const _ProfileAvatar({required this.size});
+  final double size;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    width: size,
+    height: size,
+    padding: const EdgeInsets.all(3),
+    decoration: BoxDecoration(
+      shape: BoxShape.circle,
+      border: Border.all(color: AppColors.emerald.withValues(alpha: 0.65)),
+    ),
+    child: ClipOval(
+      child: Image.network(
+        'https://avatars.githubusercontent.com/u/21100664?v=4',
+        fit: BoxFit.cover,
+        semanticLabel: 'Illustrated profile avatar',
+        errorBuilder: (context, error, stackTrace) => const ColoredBox(
+          color: AppColors.charcoal,
+          child: Icon(Icons.person_outline, color: AppColors.emerald, size: 48),
+        ),
+      ),
+    ),
+  );
 }
