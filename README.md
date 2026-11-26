@@ -1,10 +1,12 @@
 # Seif Abuashour — Software Engineering Portfolio
 
-Personal Flutter Web portfolio for **Seif Abuashour**, Full-Stack Software Engineer and Mobile Application Developer.
+Personal Flutter Web portfolio for **Seif Abuashour**, Senior Software Engineer and Independent Cyber Threat Intelligence Researcher.
 
 **Live site:** [https://saifaboashour.github.io/flutter-portfolio/](https://saifaboashour.github.io/flutter-portfolio/)
 
 **CV:** [Download PDF](https://saifaboashour.github.io/flutter-portfolio/cv/Seif_Abuashour_CV.pdf)
+
+**CTI research:** [Public research repository](https://github.com/saifaboashour/cti-research)
 
 ## Requirements
 
