@@ -92,6 +92,8 @@ void main() {
     );
     await tester.pump();
 
+    await tester.ensureVisible(find.text('View Projects'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('View Projects'));
     await tester.pump(); // should complete without needing long settle
     expect(find.textContaining('Featured work'), findsOneWidget);
