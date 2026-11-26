@@ -1,12 +1,12 @@
 {
-  "name": "Seif Abuashour | Full-Stack & Mobile Engineer",
+  "name": "Seif Abuashour | Senior Software Engineer & Independent CTI Researcher",
   "short_name": "Seif Abuashour",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
   "background_color": "#1B211D",
   "theme_color": "#1B211D",
-  "description": "Full-stack, backend, web and mobile engineering portfolio featuring Node.js, NestJS, Next.js, React, Flutter and TypeScript.",
+  "description": "Full-stack and mobile engineering portfolio and independent cyber threat intelligence research.",
   "orientation": "any",
   "prefer_related_applications": false,
   "icons": [
