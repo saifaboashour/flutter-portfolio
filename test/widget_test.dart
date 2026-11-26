@@ -75,6 +75,8 @@ void main() {
     await tester.pumpWidget(const PortfolioApp());
     await tester.pumpAndSettle();
 
+    await tester.ensureVisible(find.text('Discuss Your Project'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('Discuss Your Project'));
     await tester.pumpAndSettle();
 
@@ -103,11 +105,15 @@ void main() {
     );
     await tester.pump();
 
+    await tester.ensureVisible(find.text('Send Project Inquiry'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('Send Project Inquiry'));
     await tester.pump();
     expect(launched.last.scheme, 'mailto');
     expect(launched.last.path, 'saifaboashour98@gmail.com');
 
+    await tester.ensureVisible(find.text('GitHub'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('GitHub'));
     await tester.pump();
     expect(
@@ -115,6 +121,8 @@ void main() {
       'https://github.com/saifaboashour',
     );
 
+    await tester.ensureVisible(find.text('Connect on LinkedIn'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('Connect on LinkedIn'));
     await tester.pump();
     expect(
@@ -147,6 +155,8 @@ void main() {
     );
     await tester.pump();
 
+    await tester.ensureVisible(find.text('Copy email'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('Copy email'));
     await tester.pump();
 
@@ -158,6 +168,8 @@ void main() {
     await tester.pumpWidget(const PortfolioApp());
     await tester.pumpAndSettle();
 
+    await tester.ensureVisible(find.text('View Projects'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('View Projects'));
     await tester.pumpAndSettle();
 
