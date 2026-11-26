@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_spacing.dart';
 import '../../shared/widgets/section_header.dart';
+import '../../core/utils/external_navigator.dart';
 
 /// Independent cybersecurity practice; not a representation of SOC employment.
 class CybersecuritySection extends StatelessWidget {
@@ -52,19 +53,62 @@ class CybersecuritySection extends StatelessWidget {
         const SectionHeader(
           indexLabel: '04.',
           title: 'Cybersecurity & Threat Intelligence',
-          subtitle: 'Independent research, automation, and security engineering projects.',
+          subtitle: 'Independent CTI research, technical investigations, and security automation.',
         ),
         const SizedBox(height: AppSpacing.md),
         Text(
-          'I apply a software engineering foundation to regional cyber threat research, '
-          'collection pipelines, investigations, and repeatable security tooling. '
-          'These examples represent independent projects and lab practice, not SOC employment.',
+          'My independent research focuses on cyber threats in Jordan, the Gulf, '
+          'and the wider Middle East, including adversary infrastructure, OSINT, '
+          'indicator validation, and intelligence automation. I distinguish '
+          'observed evidence from reported claims and analytical judgments.',
           style: textTheme.bodyLarge?.copyWith(
             color: AppColors.mutedText,
             height: 1.6,
           ),
         ),
         const SizedBox(height: AppSpacing.lg),
+        Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(AppSpacing.lg),
+          decoration: BoxDecoration(
+            color: AppColors.charcoal.withValues(alpha: 0.55),
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: AppColors.outline),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Icon(Icons.article_outlined, color: AppColors.emerald, size: 30),
+              const SizedBox(height: AppSpacing.md),
+              Text('Research Publications', style: textTheme.titleLarge),
+              const SizedBox(height: AppSpacing.sm),
+              const Text(
+                'My public CTI research repository contains the publication index '
+                'and research methodology. Markdown investigations are added as '
+                'they are completed and reviewed.',
+              ),
+              const SizedBox(height: AppSpacing.md),
+              OutlinedButton.icon(
+                onPressed: () async {
+                  final opened = await ExternalNavigator.openUri(
+                    Uri.parse('https://github.com/saifaboashour/cti-research'),
+                  );
+                  if (!context.mounted || opened) return;
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Unable to open research repository.')),
+                  );
+                },
+                icon: const Icon(Icons.open_in_new, size: 18),
+                label: const Text('View Research Publications'),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: AppSpacing.lg),
+        Text('Research Projects & Labs', style: textTheme.titleLarge),
+        const SizedBox(height: AppSpacing.sm),
+        const Text('Independent projects and hands-on lab practice.'),
+        const SizedBox(height: AppSpacing.md),
         LayoutBuilder(
           builder: (context, constraints) {
             final width = constraints.maxWidth >= 720
