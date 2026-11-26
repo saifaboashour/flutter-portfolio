@@ -37,7 +37,7 @@ class HomeSection extends StatelessWidget {
   Future<void> _emailMe(BuildContext context) async {
     final opened = await ExternalNavigator.openMailto(
       profile.email,
-      subject: 'Software engineering opportunity',
+      subject: 'Project inquiry / technical partnership',
     );
     if (!context.mounted) return;
     if (!opened) {
@@ -141,20 +141,27 @@ class HomeSection extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: AppSpacing.lg),
+              Text(
+                'Available for independent software development projects and technical partnerships.',
+                style: textTheme.bodyLarge?.copyWith(color: AppColors.emerald),
+              ),
+              const SizedBox(height: AppSpacing.md),
+              const Text('Mobile apps, web platforms, backend systems, automation, and software maintenance.'),
               const SizedBox(height: AppSpacing.xl),
               Wrap(
                 spacing: AppSpacing.md,
                 runSpacing: AppSpacing.md,
                 children: [
                   FilledButton.icon(
+                    onPressed: () => _emailMe(context),
+                    icon: const Icon(Icons.mail_outline, size: 20),
+                    label: const Text('Discuss Your Project'),
+                  ),
+                  OutlinedButton.icon(
                     onPressed: onViewProjects,
                     icon: const Icon(Icons.apps_outlined, size: 20),
                     label: const Text('View Projects'),
-                  ),
-                  OutlinedButton.icon(
-                    onPressed: () => _emailMe(context),
-                    icon: const Icon(Icons.mail_outline, size: 20),
-                    label: const Text('Contact Me'),
                   ),
                   PopupMenuButton<String>(
                     tooltip: 'Download a targeted CV',
